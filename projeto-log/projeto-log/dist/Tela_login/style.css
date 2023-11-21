@@ -1,0 +1,47 @@
+html,
+body {
+  width: 100%;
+  heigh: 100%;
+  margin: 0;
+  padding: 0;
+}
+.back {
+  background-image: url("https://www.iprev.sc.gov.br/wp-content/uploads/2022/11/Resultado-eleicoes--570x350.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@keyframes opacity-in {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+
+.card-login {
+  opacity: 0.4;
+  animation-name: opacity-out;
+  animation-duration: 2s;
+}
+
+.card-login:hover {
+  opacity: 1;
+  animation-name: opacity-in;
+  animation-duration: 2s;
+}
+
+.alert-in {
+  animation-name: opacity-in;
+  animation-duration: 2s;
+}
