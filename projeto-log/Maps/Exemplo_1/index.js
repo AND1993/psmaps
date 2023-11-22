@@ -51,6 +51,7 @@ function initMap() {
         zoom: 8,
         // Tipos de mapas: roadmap, satellite, hybrid, terrain
         mapTypeId: 'meumapa',
+        //Menu tipos de mapa que vai aparecer
         mapTypeControlOptions: {
             mapTypeIds: ['roadmap', 'meumapa','satellite']
         }
