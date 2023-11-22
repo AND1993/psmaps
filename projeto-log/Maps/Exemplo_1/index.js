@@ -46,6 +46,7 @@ button.addEventListener('click', function () {
 function initMap() {
     //Opções do mapa
     var mapOptions = {
+        //Centralização do mapa
         center: { lat: -3.716816, lng: -38.519115 },
         zoom: 8,
         // Tipos de mapas: roadmap, satellite, hybrid, terrain
