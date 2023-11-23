@@ -10,22 +10,17 @@
 // releaseTile(tile) - Quando o mapa informa que não serão necessários novos blocos
 
 //--------criando o mapa
-    class MeuMapa {
+    class OverlayMaps {
         constructor(tileSize) {
         this.tileSize = tileSize;
-        this.maxZoom = 18;
-        this.name = 'meumapa';
-        this.alt = 'O mapa não carregou';
     }
 
     //metodo getTile
     getTile(coord, zoom, ownerDocument) {
         var div = ownerDocument.createElement('div');
-        div.innerHTML = 'Andre';
         div.style.width = this.tileSize.width+'px';
         div.style.height = this.tileSize.height+'px';
         div.style.fontSize = '10px';
-        div.style.backgroundColor = '#ddd';
         div.style.borderStyle = 'solid';
         div.style.borderWidth = '1px';
         div.style.borderColor = '#333';
@@ -48,16 +43,9 @@ function initMap() {
     var mapOptions = {
         //Centralização do mapa
         center: { lat: -3.716816, lng: -38.519115 },
-        zoom: 8,
-        // Tipos de mapas: roadmap, satellite, hybrid, terrain
-        mapTypeId: 'meumapa',
-        mapTypeControlOptions: {
-            mapTypeIds: ['roadmap', 'meumapa','satellite']
-        }
+        zoom: 8
     };
 
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-    //Atributo mapTypes
-    map.mapTypes.set('meumapa', new MeuMapa(new google.maps.Size(256, 256)));
+    map.overlayMapTypes.insertAt(0, new  OverlayMaps(new google.maps.Size(256, 256)));
 }
