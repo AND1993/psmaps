@@ -23,7 +23,7 @@
         var div = ownerDocument.createElement('div');
         div.innerHTML = 'Andre';
         div.style.width = this.tileSize.width+'px';
-        div.style.heigth = this.tileSize.heigth+'px';
+        div.style.height = this.tileSize.height+'px';
         div.style.fontSize = '10px';
         div.style.backgroundColor = '#ddd';
         div.style.borderStyle = 'solid';
