@@ -13,4 +13,16 @@ var mapOptions = {
 };
 
 map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+//CLasse imageMapType: classe que permite sobrepor imagens ao mapa
+var imageMapType = new google.maps.imageMapType({
+    tileSize: new google.maps.Size(256, 256),
+    getTileUrl: function(coord, zoom){
+        return 'https://tile.openstreetmap.org/' + zoom + '/' + coord.x + '/' + coord.y +'.png';
+    },
+    maxZoom: 18
+});
+
+map.mapTypes.set('osm', imageMapType);
+map.setMapTypeId('osm');
 }
