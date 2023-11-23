@@ -10,7 +10,7 @@
 // releaseTile(tile) - Quando o mapa informa que não serão necessários novos blocos
 
 //--------criando o mapa
-class MeuMapa {
+class OverlayMap {
     constructor(tileSize) {
     this.tileSize = tileSize;
     this.maxZoom = 18;
@@ -21,11 +21,9 @@ class MeuMapa {
 //metodo getTile
 getTile(coord, zoom, ownerDocument) {
     var div = ownerDocument.createElement('div');
-    div.innerHTML = 'Andre';
     div.style.width = this.tileSize.width+'px';
     div.style.heigth = this.tileSize.heigth+'px';
     div.style.fontSize = '10px';
-    div.style.backgroundColor = '#ddd';
     div.style.borderStyle = 'solid';
     div.style.borderWidth = '1px';
     div.style.borderColor = '#333';
@@ -51,13 +49,10 @@ var mapOptions = {
     zoom: 8,
     // Tipos de mapas: roadmap, satellite, hybrid, terrain
     mapTypeId: 'meumapa',
-    mapTypeControlOptions: {
-        mapTypeIds: ['roadmap', 'meumapa','satellite']
-    }
+
 };
 
 map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-//Atributo mapTypes
-map.mapTypes.set('meumapa', new MeuMapa(new google.maps.Size(256, 256)));
+
 }
