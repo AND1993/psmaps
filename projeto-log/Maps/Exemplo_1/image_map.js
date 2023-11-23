@@ -1,5 +1,3 @@
-
-
 //Variavel
 var map;
 
@@ -18,7 +16,8 @@ map = new google.maps.Map(document.getElementById('map'), mapOptions);
 var imageMapType = new google.maps.imageMapType({
     tileSize: new google.maps.Size(256,256),
     getTileUrl: function(coord, zoom){
-        return 'https://tile.openstreetmap.org/'+ zoom +'/'+ coord.x +'/'+ coord.y +'.png';},
+    return 'https://tile.openstreetmap.org/'+ zoom +'/'+ coord.x +'/'+ coord.y+'png';
+    },
     maxZoom: 18
 });
 
