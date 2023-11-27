@@ -1,0 +1,2 @@
+# novo arquivo: new file: Nome_arquivo_e_extensão
+# alteração: modified: Nome_arquivo_e_extensão
