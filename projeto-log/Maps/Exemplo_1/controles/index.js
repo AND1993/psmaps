@@ -1,4 +1,4 @@
-
+//https://developers.google.com/maps/documentation/javascript/controls?hl=pt-br#ControlsOverview
 //Variavel
 var map;
 //função do mapa
