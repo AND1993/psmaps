@@ -1,2 +1,4 @@
 # novo arquivo: new file: Nome_arquivo_e_extensão
 # alteração: modified: Nome_arquivo_e_extensão
+
+#Atualizar os arquivos no PC apartir do que estar no GIT: Merge branch 'main' of *link do repositorio no git*
